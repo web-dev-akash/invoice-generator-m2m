@@ -397,10 +397,10 @@ const FinalPrice = ({ IGST, totalAmount, SAC }) => (
             >
               18%
             </Text>
-            <Text style={{ padding: "2 5", flex: 1 }}>{IGST}</Text>
+            <Text style={{ padding: "2 5", flex: 1 }}>{IGST?.toFixed(2)}</Text>
           </View>
         </View>
-        <Text style={{ ...styles.tableCell }}>{IGST}</Text>
+        <Text style={{ ...styles.tableCell }}>{IGST?.toFixed(2)}</Text>
       </View>
       <View style={[styles.tableRow, styles.tableHeader]}>
         <Text
@@ -452,10 +452,12 @@ const FinalPrice = ({ IGST, totalAmount, SAC }) => (
             >
               {"  "}
             </Text>
-            <Text style={{ padding: "2 5", flex: 1 }}>{IGST}</Text>
+            <Text style={{ padding: "2 5", flex: 1 }}>{IGST?.toFixed(2)}</Text>
           </View>
         </View>
-        <Text style={{ ...styles.tableCell, fontWeight: "bold" }}>{IGST}</Text>
+        <Text style={{ ...styles.tableCell, fontWeight: "bold" }}>
+          {IGST?.toFixed(2)}
+        </Text>
       </View>
     </View>
     <View
@@ -521,7 +523,7 @@ const FinalPrice = ({ IGST, totalAmount, SAC }) => (
             flex: 1,
             border: "1px solid black",
             borderRight: "none",
-            borderBottom: "none",
+            borderB: "none",
           }}
         >
           <Text style={{ fontWeight: "bold" }}>M2MLOGGER</Text>
@@ -533,60 +535,6 @@ const FinalPrice = ({ IGST, totalAmount, SAC }) => (
         </View>
       </View>
     </View>
-
-    {/* 
-    <View style={styles.finalTable}>
-      <View style={styles.finalTableRow}>
-        <View style={styles.finalTableColHeader}>
-          <Text style={styles.finalTableCell}>SAC</Text>
-        </View>
-        <View style={styles.finalTableColHeader}>
-          <Text style={styles.finalTableCell}>Taxable Value</Text>
-        </View>
-        <View style={styles.finalTableColHeader}>
-          <Text style={styles.finalTableCell}>Integrated Tax</Text>
-        </View>
-        <View style={styles.finalTableColHeader}>
-          <Text style={styles.finalTableCell}>Total Tax Amount</Text>
-        </View>
-      </View>
-      <View style={styles.finalTableRow}>
-        <View style={styles.finalTableCol}>
-          <Text style={styles.finalTableCell}>997331</Text>
-        </View>
-        <View style={styles.finalTableCol}>
-          <Text style={styles.finalTableCell}>10,000.00</Text>
-        </View>
-        <View style={styles.finalTableCol}>
-          <Text style={styles.finalTableCell}>18%</Text>
-          <Text style={styles.finalTableCell}>1,800.00</Text>
-        </View>
-        <View style={styles.finalTableCol}>
-          <Text style={styles.finalTableCell}>1,800.00</Text>
-        </View>
-      </View>
-    </View>
-    <Text style={styles.finalDisclaimer}>
-      Tax Amount (in words):{" "}
-      <Text style={styles.finalBoldText}>
-        INR One Thousand Eight Hundred Only.
-      </Text>
-    </Text>
-    <Text style={styles.finalBankDetails}>
-      Company's Bank Details{"\n"}
-      A/c Holder's Name : <Text style={styles.finalBoldText}>M2MLOGGER</Text>
-      {"\n"}
-      Bank Name : Bank of Company{"\n"}
-      A/c No. : XXXXXXX3812{"\n"}
-      Branch : SME Branch, Delhi{"\n"}
-      IFS Code : BOC000XXXX
-    </Text>
-    
-    <View style={styles.finalSignatureSection}>
-      <Text style={styles.finalSignatureText}>
-        M2MLOGGER{"\n"}Authorised Signatory
-      </Text>
-    </View> */}
   </View>
 );
 

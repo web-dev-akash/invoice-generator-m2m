@@ -111,8 +111,8 @@ export const FormComponent = () => {
           itemData={itemData}
           handleAddMoreItems={handleAddMoreItems}
           itemsArray={itemsArray}
-          setItemsArray={setItemsArray}
           handleBack={handleBack}
+          setItemsArray={setItemsArray}
         />
       )}
     </Box>

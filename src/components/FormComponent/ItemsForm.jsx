@@ -15,14 +15,16 @@ import {
 } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import { MdExpandMore, MdDeleteForever } from "react-icons/md";
+import { useDispatch } from "react-redux";
+import { removeItems } from "../../redux/action";
 
 export const ItemsForm = ({
   handleAddMoreItems,
   handleItemChange,
   itemData,
   itemsArray,
-  setItemsArray,
   handleBack,
+  setItemsArray,
 }) => {
   return (
     <Box>
@@ -36,20 +38,6 @@ export const ItemsForm = ({
             <Typography>
               Item {index + 1}: {item.name || "Unnamed"}
             </Typography>
-            <IconButton
-              sx={{
-                position: "absolute",
-                right: "8%",
-                top: "50%",
-                transform: "translateY(-50%)",
-              }}
-              color="error"
-              onClick={() => {
-                setItemsArray(itemsArray.filter((_, i) => i !== index));
-              }}
-            >
-              <MdDeleteForever />
-            </IconButton>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>

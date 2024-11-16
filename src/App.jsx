@@ -3,13 +3,12 @@ import "./App.css";
 import { FormComponent } from "./components/FormComponent/FormComponent";
 import { PdfViewer } from "./components/PDFViewer/PDFViewer";
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 export const App = () => {
   const items = useSelector((state) => state.items);
-  const user = useSelector((state) => state.customer);
 
-  console.log("Items : ", items);
-  console.log("User : ", user);
+  useEffect(() => {}, [items]);
 
   return (
     <Box>

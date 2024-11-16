@@ -17,3 +17,11 @@ export const addItems = (payload) => ({
   type: ADD_ITEMS,
   payload,
 });
+
+export const removeItems = (items, index) => (dispatch) => {
+  try {
+    dispatch(addItems(items.filter((_, i) => i !== index)));
+  } catch (error) {
+    console.log(error);
+  }
+};
